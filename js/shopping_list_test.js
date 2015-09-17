@@ -46,10 +46,12 @@ describe('ShoppingListItem', function() {
     });
   });
 
-  it('should have a function "render"', function() {
-    ShoppingListItem.prototype.check = function(is_done) {
-      expect(newList).to.be('<li class="completed_[is_done]"><span>[name]</span> <span>[description]</span></li>');
-    };
+  describe('.uncheck', function() {
+    it('should have a function "render"', function() {
+      ShoppingListItem.prototype.check = function(is_done) {
+        expect(newList).to.be('<li class="completed_[is_done]"><span>[name]</span> <span>[description]</span></li>');
+      };
+    });
   });
 
 }); // End ShoppngListItem specs
