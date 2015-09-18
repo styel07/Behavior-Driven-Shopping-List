@@ -11,7 +11,7 @@ describe('ShoppingListItem', function() {
   var newListItem;
 
   beforeEach(function() {
-    newListItem = new ShoppingListItem('Food', 'Grapes', false);
+    newListItem = new ShoppingListItem('Food', 'Grapes');
   });
 
   it('should be a function', function() {
@@ -82,7 +82,7 @@ describe('ShoppingList', function() {
 
   describe('.addItem', function() {
 
-  var newList;
+    var newList;
 
     it('should be a prototype', function() {
       expect(newList).should.be.a.instanceof(ShoppingList);
@@ -91,12 +91,12 @@ describe('ShoppingList', function() {
 
   describe('removeItem', function() {
 
-  var newList;
+    var newList;
   });
 
   describe('render', function() {
 
-  var newList;
+    var newList;
   });
 
 });

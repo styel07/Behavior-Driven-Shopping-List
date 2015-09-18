@@ -1,2 +1,8 @@
-var item = new ShoppingListItem('asdasd','asdasdasdasd');
-console.log(item);
+function buttonClick() {
+  var input = document.getElementById('inputTitle').value;
+  document.getElementById('content').value = input;
+}
+
+function doFunction() {
+  alert('HELLO!');
+}
