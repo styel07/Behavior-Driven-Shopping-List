@@ -8,10 +8,10 @@ var expect = chai.expect;
 
 describe('ShoppingListItem', function() {
 
-  var newList;
+  var newListItem;
 
   beforeEach(function() {
-    newList = new ShoppingListItem('Food', 'Grapes', false);
+    newListItem = new ShoppingListItem('Food', 'Grapes', false);
   });
 
   it('should be a function', function() {
@@ -19,15 +19,15 @@ describe('ShoppingListItem', function() {
   });
 
   it('should have a item name', function() {
-    expect(newList).to.have.property('name');
+    expect(newListItem).to.have.property('name');
   });
 
   it('should have a description', function() {
-    expect(newList).to.have.property('description');
+    expect(newListItem).to.have.property('description');
   });
 
   it('should have "is_done" property', function() {
-    expect(newList).to.have.property('is_done');
+    expect(newListItem).to.have.property('is_done');
   });
 
   describe('.check', function() {
@@ -46,12 +46,58 @@ describe('ShoppingListItem', function() {
     });
   });
 
-  describe('.uncheck', function() {
+  describe('.render', function() {
     it('should have a function "render"', function() {
       ShoppingListItem.prototype.check = function(is_done) {
-        expect(newList).to.be('<li class="completed_[is_done]"><span>[name]</span> <span>[description]</span></li>');
+        expect(newListItem).to.be('<li class="completed_[is_done]"><span>[name]</span> <span>[description]</span></li>');
       };
     });
   });
 
 }); // End ShoppngListItem specs
+
+describe('ShoppingList', function() {
+
+  var newList;
+
+  beforeEach(function() {
+    newList = new ShoppingList([1,2,3]);
+  });
+
+  // it('should have function', function() {
+  //   expect(ShoppingList).to.be.a('function');
+  // });
+
+  it('should have function', function() {
+    expect(ShoppingList).to.be.a('function');
+  });
+
+  it('should have a property name items', function() {
+    newList.should.have.property('items');
+  });
+
+  it('should have a constructor that initializes items as empty []', function() {
+    expect(newList).to.be.instanceof(Array);
+  });
+
+  describe('.addItem', function() {
+
+  var newList;
+
+    it('should be a prototype', function() {
+      expect(newList).should.be.a.instanceof(ShoppingList);
+    });
+  }); // end of .addItem
+
+  describe('removeItem', function() {
+
+  var newList;
+  });
+
+  describe('render', function() {
+
+  var newList;
+  });
+
+});
+
