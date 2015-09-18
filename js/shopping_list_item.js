@@ -12,11 +12,11 @@ function ShoppingListItem(name, description) {
 }
 
 ShoppingListItem.prototype.check = function() {
-  return this.is_done = true;
+  this.is_done = true;
 };
 
 ShoppingListItem.prototype.uncheck = function() {
-  return this.is_done = false;
+  this.is_done = false;
 };
 
 ShoppingListItem.prototype.render = function() {
@@ -46,5 +46,5 @@ ShoppingList.prototype.removeItem = function(itemToList) {
 };
 
 ShoppingList.prototype.render = function() {
-
+  return console.log(items);
 };
