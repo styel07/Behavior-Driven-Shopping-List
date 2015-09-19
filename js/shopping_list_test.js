@@ -31,9 +31,10 @@ describe('ShoppingListItem', function() {
   });
 
   describe('.check', function() {
+    var donut = new ShoppingList();
     it('should have a function "check"', function() {
       ShoppingListItem.prototype.check = function(is_done) {
-        this.is_done = true;
+        expect(donut).addItem().to.be.true;
       };
     });
   });

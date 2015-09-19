@@ -1,5 +1,4 @@
-var sli = new ShoppingListItem();
-//class shoppingList
+//var sli = new ShoppingListItem();
 
 function ShoppingList() {
   this.items = [];
@@ -22,8 +21,12 @@ ShoppingList.prototype.removeItem = function(itemToList) {
 };
 
 ShoppingList.prototype.render = function() {
-  if ( items !== null) {
-    // build the string
-    return '<ul>' + sli.render() + '</ul>';
+  var fullList = [];
+
+  for (var i = 0; i < fullList.length; i++){
+    fullList.push(item[i]);
   }
+
+  // build the string
+  return '<ul>' + fullList + '</ul>';
 };
