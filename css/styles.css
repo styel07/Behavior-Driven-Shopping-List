@@ -1,8 +1,9 @@
-.submit {
+a#add_shopping_list_item_button.submit {
   background-color: #bebebe;
   text-decoration: none;
   color: #fff;
   padding: 10px;
+  margin-top: 10px;
   margin-bottom: 10px;
 }
 

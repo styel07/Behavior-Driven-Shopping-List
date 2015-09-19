@@ -31,7 +31,7 @@ describe('ShoppingListItem', function() {
   });
 
   describe('.check', function() {
-    var donut = new ShoppingList();
+   var donut = new ShoppingList();
     it('should have a function "check"', function() {
       ShoppingListItem.prototype.check = function(is_done) {
         expect(donut).addItem().to.be.true;
@@ -78,7 +78,7 @@ describe('ShoppingList', function() {
   });
 
   it('should have a constructor that initializes items as empty []', function() {
-    expect(newList).to.be.instanceof(Array);
+    expect(newList).to.be.deep.equal([]);
   });
 
   describe('.addItem', function() {

@@ -1,8 +1,20 @@
-var listItem = new ShoppingListItem();
 var list = new ShoppingList();
 
-var title = document.querySelector('#title').value;
-var description = document.querySelector('#description').value;
+
+var btn = document.querySelector('#add_shopping_list_item_button');
+
+function add_to_shopping_list() {
+  var title = document.querySelector('#title').value;
+  var description = document.querySelector('#description').value;
+
+  var item = new ShoppingListItem(title, description);
+  list.addItem(item);
+
+  document.getElementById('content').innerHTML = list.render();
+}
+
+btn.addEventListener('click', add_to_shopping_list);
+
 
 
 // //Bind event handler to all links on click

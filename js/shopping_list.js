@@ -1,14 +1,11 @@
-//var sli = new ShoppingListItem();
-
 function ShoppingList() {
   this.items = [];
 }
 
 ShoppingList.prototype.addItem = function(itemToList) {
-  if (itemToList instanceof ShoppingListItem) {
-    items.push(itemToList);
-  }
-  throw new Error('Not an item!');
+  //var title = document.querySelector('#title').value;
+  this.items.push(itemToList);
+  //throw new Error('Not an item!');
 };
 
 ShoppingList.prototype.removeItem = function(itemToList) {
@@ -21,12 +18,10 @@ ShoppingList.prototype.removeItem = function(itemToList) {
 };
 
 ShoppingList.prototype.render = function() {
-  var fullList = [];
-
-  for (var i = 0; i < fullList.length; i++){
-    fullList.push(item[i]);
+  var str = '';
+  for (var i = 0; i < this.items.length; i++){
+    str += this.items[i].render();
   }
-
   // build the string
-  return '<ul>' + fullList + '</ul>';
+  return '<ul>' + str + '</ul>';
 };
